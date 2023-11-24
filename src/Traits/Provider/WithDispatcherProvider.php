@@ -1,6 +1,6 @@
 <?php
 
-namespace Raid\Core\Dispatcher\Provider;
+namespace Raid\Core\Dispatcher\Traits\Provider;
 
 trait WithDispatcherProvider
 {
