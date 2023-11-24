@@ -19,16 +19,15 @@ class Dispatch extends Model
         'dispatchable_type',
         'dispatcher_type',
         'dispatcher_column',
-        'code',
         'verified_at',
         'verified',
+        'code',
     ];
 
     /**
      * {@inheritdoc}
      */
     protected $casts = [
-        'dispatched' => 'boolean',
         'verified' => 'boolean',
         'verified_at' => 'datetime',
     ];
