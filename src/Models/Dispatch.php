@@ -2,6 +2,8 @@
 
 namespace Raid\Core\Dispatcher\Models;
 
+use Raid\Core\Model\Models\Model;
+
 class Dispatch extends Model
 {
     /**
