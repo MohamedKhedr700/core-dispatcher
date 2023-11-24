@@ -7,7 +7,7 @@ trait WithPrepare
     /**
      * {@inheritdoc}
      */
-    public function prepare(string $code): void
+    public function prepare(): void
     {
         $this->dispatchable()->dispatches()->create([
             'code' =>  $this->getCode(),
