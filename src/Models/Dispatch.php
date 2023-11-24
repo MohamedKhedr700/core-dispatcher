@@ -19,8 +19,8 @@ class Dispatch extends Model
         'dispatchable_type',
         'dispatcher_type',
         'dispatcher_column',
+        'code',
         'verified_at',
-        'dispatched',
         'verified',
     ];
 
@@ -30,7 +30,6 @@ class Dispatch extends Model
     protected $casts = [
         'dispatched' => 'boolean',
         'verified' => 'boolean',
-        'dispatched_at' => 'datetime',
         'verified_at' => 'datetime',
     ];
 
@@ -40,16 +39,6 @@ class Dispatch extends Model
     public function dispatchable()
     {
         return $this->morphTo();
-    }
-
-    /**
-     * Dispatch.
-     */
-    public function dispatch(): void
-    {
-        $this->dispatched = true;
-        $this->dispatched_at = now();
-        $this->save();
     }
 
     /**
@@ -65,7 +54,6 @@ class Dispatch extends Model
     /**
      * Reset.
      */
-
     public function reset(): void
     {
         $this->verified = false;
