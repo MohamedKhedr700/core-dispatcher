@@ -30,14 +30,8 @@ class Dispatch extends Model
     protected $casts = [
         'dispatched' => 'boolean',
         'verified' => 'boolean',
-    ];
-
-    /**
-     * {@inheritdoc}
-     */
-    protected $dates = [
-        'dispatched_at',
-        'verified_at',
+        'dispatched_at' => 'datetime',
+        'verified_at' => 'datetime',
     ];
 
     /**
