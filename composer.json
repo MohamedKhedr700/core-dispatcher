@@ -27,7 +27,7 @@
         "extra": {
         "laravel": {
             "providers": [
-              "DispatcherServiceProvider"
+                "Raid\\Core\\Dispatcher\\DispatcherServiceProvider"
             ]
         }
     },
