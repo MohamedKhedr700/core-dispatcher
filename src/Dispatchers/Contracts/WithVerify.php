@@ -7,5 +7,5 @@ interface WithVerify
     /**
      * Verify the dispatch.
      */
-    public function verify();
+    public function verify(string $code);
 }
