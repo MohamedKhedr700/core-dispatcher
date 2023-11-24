@@ -7,5 +7,5 @@ interface WithDispatch
     /**
      * dispatch the dispatch.
      */
-    public function dispatch(): mixed;
+    public function dispatch();
 }
