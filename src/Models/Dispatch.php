@@ -17,6 +17,7 @@ class Dispatch extends Model
     protected $fillable = [
         'dispatchable_id',
         'dispatchable_type',
+        'dispatcher_type',
         'dispatcher_column',
         'verified_at',
         'dispatched',
@@ -40,7 +41,7 @@ class Dispatch extends Model
     ];
 
     /**
-     * {@inheritdoc}
+     * Get the dispatchable model.
      */
     public function dispatchable()
     {
@@ -48,17 +49,19 @@ class Dispatch extends Model
     }
 
     /**
-     * {@inheritdoc}
+     * Dispatch.
      */
-    public function dispatcher()
+    public function dispatch(): void
     {
-        return $this->morphTo();
+        $this->dispatched = true;
+        $this->dispatched_at = now();
+        $this->save();
     }
 
     /**
-     * {@inheritdoc}
+     * Verify.
      */
-    public function verify()
+    public function verify(): void
     {
         $this->verified = true;
         $this->verified_at = now();
@@ -66,12 +69,15 @@ class Dispatch extends Model
     }
 
     /**
-     * {@inheritdoc}
+     * Reset.
      */
-    public function dispatch()
+
+    public function reset(): void
     {
-        $this->dispatched = true;
-        $this->dispatched_at = now();
+        $this->verified = false;
+        $this->verified_at = null;
+        $this->dispatched = false;
+        $this->dispatched_at = null;
         $this->save();
     }
 }
