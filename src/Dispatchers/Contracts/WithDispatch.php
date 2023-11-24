@@ -2,7 +2,7 @@
 
 namespace Raid\Core\Dispatcher\Dispatchers\Contracts;
 
-interface WithDispatch
+interface WithDispatch extends WithPrepare, WithGenerate, WithVerify, WithSend, WithReset
 {
     /**
      * dispatch the dispatch.
