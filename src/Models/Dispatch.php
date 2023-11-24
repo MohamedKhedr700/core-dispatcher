@@ -58,8 +58,6 @@ class Dispatch extends Model
     {
         $this->verified = false;
         $this->verified_at = null;
-        $this->dispatched = false;
-        $this->dispatched_at = null;
         $this->save();
     }
 }
