@@ -1,0 +1,31 @@
+{
+    "name": "raid/core-dispatcher",
+    "description": "Raid Dispatcher Controller",
+    "type": "library",
+    "license": "MIT",
+    "version": "1.0.0",
+    "minimum-stability": "dev",
+    "require": {
+        "php": "^8.2",
+        "raid/core-command": "dev-main"
+
+    },
+    "autoload": {
+        "psr-4": {
+            "Raid\\Core\\Dispatcher\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+              "DispatcherServiceProvider"
+            ]
+        }
+    },
+    "authors": [
+        {
+            "name": "mohamedkhedr700",
+            "email": "mohamedkhedr700@gmail.com"
+        }
+    ]
+}
