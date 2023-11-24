@@ -1,6 +1,6 @@
 <?php
 
-namespace Raid\Core\Dispatcher\Traits\Provider\Dispatcher;
+namespace Raid\Core\Dispatcher\Traits\Dispatcher;
 
 use Raid\Core\Dispatcher\Dispatchers\Contracts\DispatcherInterface;
 
