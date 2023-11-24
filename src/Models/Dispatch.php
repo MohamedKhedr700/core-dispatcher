@@ -50,14 +50,4 @@ class Dispatch extends Model
         $this->verified_at = now();
         $this->save();
     }
-
-    /**
-     * Reset.
-     */
-    public function reset(): void
-    {
-        $this->verified = false;
-        $this->verified_at = null;
-        $this->save();
-    }
 }
