@@ -41,7 +41,23 @@ class Dispatch extends Model
     }
 
     /**
-     * Verify.
+     * Get the dispatch verified status.
+     */
+    public function verified(): bool
+    {
+        return (bool) $this->verified;
+    }
+
+    /**
+     * Indicates if the dispatch is expired.
+     */
+    public function expired(): bool
+    {
+        return $this->created_at->diffInMinutes(now()) > 5;
+    }
+
+    /**
+     * Verify the dispatch.
      */
     public function verify(): void
     {

@@ -19,15 +19,15 @@ trait WithVerify
             throw new Exception(__('message.dispatch.not_found'));
         }
 
-        if ($dispatch->code !== $code) {
+        if ($dispatch->code() !== $code) {
             throw new Exception(__('message.dispatch.invalid_code'));
         }
 
-        if ($dispatch->verified) {
+        if ($dispatch->verified()) {
             throw new Exception(__('message.dispatch.already_verified'));
         }
 
-        if ($dispatch->created_at->diffInMinutes(now()) > 5) {
+        if ($dispatch->expired()) {
             throw new Exception(__('message.dispatch.expired_code'));
         }
 
