@@ -17,7 +17,7 @@ trait Dispatchable
     /**
      * {@inheritdoc}
      */
-    public function latestDispatch(string $type)
+    public function latestDispatch(string $type): ?Dispatch
     {
         return $this->dispatches()->where('dispatcher_type', $type)->latest()->first();
     }

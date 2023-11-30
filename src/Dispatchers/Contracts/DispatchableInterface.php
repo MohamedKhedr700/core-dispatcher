@@ -2,6 +2,8 @@
 
 namespace Raid\Core\Dispatcher\Dispatchers\Contracts;
 
+use Raid\Core\Dispatcher\Models\Dispatch;
+
 interface DispatchableInterface
 {
     /**
@@ -9,5 +11,8 @@ interface DispatchableInterface
      */
     public function dispatches();
 
-    public function latestDispatch();
+    /**
+     * Get the latest dispatch.
+     */
+    public function latestDispatch(string $type): ?Dispatch;
 }
