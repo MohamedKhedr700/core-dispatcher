@@ -9,5 +9,4 @@ use Raid\Core\Dispatcher\Traits\Dispatcher\WithType;
 abstract class Dispatcher implements DispatcherInterface
 {
     use WithDispatchable;
-    use WithType;
 }

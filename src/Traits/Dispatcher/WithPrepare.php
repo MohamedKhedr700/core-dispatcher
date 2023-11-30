@@ -11,7 +11,7 @@ trait WithPrepare
     {
         $this->dispatchable()->dispatches()->create([
             'code' =>  $this->getCode(),
-            'dispatcher_type' => static::type(),
+            'dispatcher_type' => static::class,
         ]);
     }
 }
