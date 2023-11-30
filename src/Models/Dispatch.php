@@ -37,7 +37,7 @@ class Dispatch extends Model
      */
     public function code(): ?string
     {
-        return $this->code;
+        return $this->attribute('code');
     }
 
     /**
@@ -45,7 +45,7 @@ class Dispatch extends Model
      */
     public function verified(): bool
     {
-        return (bool) $this->verified;
+        return $this->attribute('verified', false);
     }
 
     /**
@@ -53,7 +53,7 @@ class Dispatch extends Model
      */
     public function expired(): bool
     {
-        return $this->created_at->diffInMinutes(now()) > 5;
+        return $this->getAttribute('created_at')->diffInMinutes(now()) > 5;
     }
 
     /**
@@ -73,4 +73,5 @@ class Dispatch extends Model
     {
         return $this->morphTo();
     }
+
 }
