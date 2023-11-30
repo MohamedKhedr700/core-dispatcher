@@ -2,7 +2,7 @@
 
 namespace Raid\Core\Dispatcher\Traits\Dispatcher;
 
-class WithGenerate
+trait WithGenerate
 {
     /**
      * Generated result.
