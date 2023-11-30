@@ -10,7 +10,7 @@ trait WithGenerate
     protected mixed $generated;
 
     /**
-     * {@inheritdoc}
+     * Set generated result.
      */
     public function setGenerated(mixed $generated): static
     {
