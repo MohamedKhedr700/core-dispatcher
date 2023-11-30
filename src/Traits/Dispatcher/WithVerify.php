@@ -13,7 +13,7 @@ trait WithVerify
      */
     public function verify(string $code): void
     {
-        $dispatch = $this->dispatchable()->dispatches()->firstWhere('dispatcher_type', static::type());
+        $dispatch = $this->dispatchable()->dispatches()->firstWhere('dispatcher_type', static::class);
 
         if (! $dispatch) {
             throw new Exception(__('message.dispatch.not_found'));
