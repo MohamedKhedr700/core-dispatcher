@@ -30,10 +30,12 @@ trait WithCode
     /**
      * {@inheritdoc}
      */
-    public function generateCode(): static
+    public function generateCode(): string
     {
-        $this->code = mt_rand(100000, 999999);
+        if (! isset($this->code)) {
+            $this->code = mt_rand(100000, 999999);
+        }
 
-        return $this;
+        return $this->code;
     }
 }
