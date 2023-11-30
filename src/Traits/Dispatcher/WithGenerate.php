@@ -7,7 +7,7 @@ trait WithGenerate
     /**
      * Generated result.
      */
-    protected mixed $generated;
+    protected mixed $generated = null;
 
     /**
      * Set generated result.
