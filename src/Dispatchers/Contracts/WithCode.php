@@ -5,7 +5,7 @@ namespace Raid\Core\Dispatcher\Dispatchers\Contracts;
 interface WithCode
 {
     /**
-     * Get the dispatcher code.
+     * Generate the dispatcher code.
      */
-    public function getCode();
+    public function generateCode();
 }
