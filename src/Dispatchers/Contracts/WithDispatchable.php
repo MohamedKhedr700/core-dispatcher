@@ -7,7 +7,7 @@ interface WithDispatchable
     /**
      * Set the dispatchable instance.
      */
-    public function setDispatchable(DispatchableInterface $dispatchable): void;
+    public function setDispatchable(DispatchableInterface $dispatchable): static;
 
     /**
      * Get the dispatchable instance or attribute by given key.

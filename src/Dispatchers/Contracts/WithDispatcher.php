@@ -7,7 +7,7 @@ interface WithDispatcher
     /**
      * Set the dispatcher.
      */
-    public function setDispatcher(DispatcherInterface $dispatcher): void;
+    public function setDispatcher(DispatcherInterface $dispatcher): static;
 
     /**
      * Get the dispatcher.

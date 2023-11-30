@@ -10,8 +10,8 @@ trait WithPrepare
     public function prepare(): void
     {
         $this->dispatchable()->dispatches()->create([
-            'code' =>  $this->getCode(),
             'dispatcher_type' => static::class,
+            'code' => $this->getCode(),
         ]);
     }
 }

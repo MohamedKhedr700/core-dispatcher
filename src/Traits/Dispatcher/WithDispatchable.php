@@ -14,9 +14,11 @@ trait WithDispatchable
     /**
      * {@inheritdoc}
      */
-    public function setDispatchable(DispatchableInterface $dispatchable): void
+    public function setDispatchable(DispatchableInterface $dispatchable): static
     {
         $this->dispatchable = $dispatchable;
+
+        return $this;
     }
 
     /**

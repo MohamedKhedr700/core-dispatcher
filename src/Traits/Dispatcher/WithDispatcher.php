@@ -14,9 +14,11 @@ trait WithDispatcher
     /**
      * {@inheritdoc}
      */
-    public function setDispatcher(DispatcherInterface $dispatcher): void
+    public function setDispatcher(DispatcherInterface $dispatcher): static
     {
         $this->dispatcher = $dispatcher;
+
+        return $this;
     }
 
     /**

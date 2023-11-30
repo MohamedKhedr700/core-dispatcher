@@ -9,8 +9,5 @@ interface DispatchableInterface
      */
     public function dispatches();
 
-    /**
-     * {@inheritdoc}
-     */
     public function latestDispatch();
 }
