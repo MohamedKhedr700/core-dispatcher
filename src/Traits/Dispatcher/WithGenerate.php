@@ -20,7 +20,7 @@ trait WithGenerate
     }
 
     /**
-     * {@inheritdoc}
+     * Get generated result.
      */
     public function generated(): mixed
     {
@@ -30,7 +30,8 @@ trait WithGenerate
     /**
      * {@inheritdoc}
      */
-    public function generate(): void
+    public function generate()
     {
+
     }
 }
