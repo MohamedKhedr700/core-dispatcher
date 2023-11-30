@@ -33,11 +33,11 @@ class Dispatch extends Model
     ];
 
     /**
-     * Get the dispatchable model.
+     * Get the dispatch code.
      */
-    public function dispatchable()
+    public function code(): ?string
     {
-        return $this->morphTo();
+        return $this->code;
     }
 
     /**
@@ -48,5 +48,13 @@ class Dispatch extends Model
         $this->verified = true;
         $this->verified_at = now();
         $this->save();
+    }
+
+    /**
+     * Get the dispatchable model.
+     */
+    public function dispatchable()
+    {
+        return $this->morphTo();
     }
 }
