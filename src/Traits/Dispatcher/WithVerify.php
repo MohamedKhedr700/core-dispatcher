@@ -15,6 +15,10 @@ trait WithVerify
     {
         $dispatch = $this->dispatchable()->dispatches()->firstWhere('dispatcher_type', static::column());
 
+        if (! $dispatch) {
+            throw new Exception(__('message.dispatch.not_found'));
+        }
+
         if ($dispatch->verified) {
             throw new Exception(__('message.dispatch.already_verified'));
         }
