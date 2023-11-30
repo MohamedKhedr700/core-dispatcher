@@ -13,4 +13,12 @@ trait Dispatchable
     {
         return $this->morphMany(Dispatch::class, 'dispatchable');
     }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function latestDispatch(string $type)
+    {
+        return $this->dispatches()->where('dispatcher_type', $type)->latest()->first();
+    }
 }
