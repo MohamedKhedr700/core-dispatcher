@@ -30,7 +30,7 @@ trait WithGenerate
     /**
      * {@inheritdoc}
      */
-    public function generate()
+    public function generate(): void
     {
     }
 }
