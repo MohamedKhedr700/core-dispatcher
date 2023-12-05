@@ -2,6 +2,8 @@
 
 namespace Raid\Core\Dispatcher\Providers;
 
+use Illuminate\Console\Application;
+use Illuminate\Database\Migrations\Migrator;
 use Illuminate\Support\ServiceProvider;
 use Raid\Core\Dispatcher\Traits\Provider\WithDispatcherProvider;
 
@@ -26,5 +28,6 @@ class DispatcherServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
+        $this->registerMigrations();
     }
 }
