@@ -20,8 +20,6 @@ return new class extends Migration
             $table->string('code')->nullable();
             $table->boolean('verified')->default(false);
             $table->timestamp('verified_at')->nullable();
-            $table->uuid('created_by')->nullable();
-            $table->uuid('updated_by')->nullable();
             $table->timestamps();
         });
     }
